@@ -1,34 +1,34 @@
-[{
-        "id": 1,
-        "title": "Learning Singleton Pattern",
-        "description": "I would like to learn singleton in JS language, it's important for my course.",
-        "link": "https://link.com",
-        "image": "https://image.com",
-        "priority": 3,
-        "timeToFinish": 120,
-        "status": "inactive",
-        "createdAt": ""
-    },
-    {
-        "id": 2,
-        "title": "Learning Singleton Pattern 2",
-        "description": "It's important for my course description 2",
-        "link": "https://link.com",
-        "image": "https://image.com",
-        "priority": 2,
-        "timeToFinish": 60,
-        "status": "inactive",
-        "createdAt": ""
-    },
-    {
-        "id": 3,
-        "title": "Learning Singleton Pattern 3",
-        "description": "I would like to description 3",
-        "link": "https://link.com",
-        "image": "https://image.com",
-        "priority": 1,
-        "timeToFinish": 90,
-        "status": "inactive",
-        "createdAt": ""
-    }
-]
+// [{
+//         "id": 1,
+//         "title": "Learning Singleton Pattern",
+//         "description": "I would like to learn singleton in JS language, it's important for my course.",
+//         "link": "https://link.com",
+//         "image": "https://image.com",
+//         "priority": 3,
+//         "timeToFinish": 120,
+//         "status": "inactive",
+//         "createdAt": ""
+//     },
+//     {
+//         "id": 2,
+//         "title": "Learning Singleton Pattern 2",
+//         "description": "It's important for my course description 2",
+//         "link": "https://link.com",
+//         "image": "https://image.com",
+//         "priority": 2,
+//         "timeToFinish": 60,
+//         "status": "inactive",
+//         "createdAt": ""
+//     },
+//     {
+//         "id": 3,
+//         "title": "Learning Singleton Pattern 3",
+//         "description": "I would like to description 3",
+//         "link": "https://link.com",
+//         "image": "https://image.com",
+//         "priority": 1,
+//         "timeToFinish": 90,
+//         "status": "inactive",
+//         "createdAt": ""
+//     }
+// ]

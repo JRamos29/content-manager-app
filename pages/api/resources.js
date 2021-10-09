@@ -1,5 +1,9 @@
-import data from './data.json';
+// import data from './data.json';
+
+// export default function (req, res) {
+//     res.send(data)
+// }
 
 export default function (req, res) {
-    res.send(data)
+    res.send("resources...")
 }
