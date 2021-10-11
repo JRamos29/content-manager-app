@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const ResourceList = ({ resources }) => {
 	const renderResources = () =>
 		resources.map((resource) => (
@@ -10,6 +12,9 @@ const ResourceList = ({ resources }) => {
 						{resource.title}
 					</h1>
 					<p className="has-text-dark">{resource.description}</p>
+					<Link href={`/resources/${resource.id}`}>
+						<a className="button is-link">Details</a>
+					</Link>
 				</div>
 			</div>
 		));
