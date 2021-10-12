@@ -28,8 +28,7 @@ const ResourceEdit = ({ resource }) => {
 
 export async function getServerSideProps({ params }) {
 	const dataRes = await fetch(
-		`http://localhost:3001/api/resources/${params.id}`
-		// `${process.env.API_URL}/resources/${params.id}`
+		`${process.env.API_URL}/resources/${params.id}`
 	);
 	const data = await dataRes.json();
 

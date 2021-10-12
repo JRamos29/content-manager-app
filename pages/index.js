@@ -21,7 +21,7 @@ function Home({ resources }) {
 // Is called every time you visit the page
 // function is executed on the server
 export async function getServerSideProps() {
-	const resData = await fetch('http://localhost:3001/api/resources');
+	const resData = await fetch(`${process.env.API_URL}/resources`);
 	const data = await resData.json();
 
 	// console.log(data);

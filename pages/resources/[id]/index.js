@@ -3,6 +3,8 @@ import Layout from 'components/Layout';
 import Link from 'next/link';
 import axios from 'axios';
 import resources from 'pages/api/resources';
+import ResourceLabel from 'components/ResourceLabel';
+import moment from 'moment';
 
 const ResourceDetail = ({ resource }) => {
 	// const router = useRouter();
@@ -27,29 +29,38 @@ const ResourceDetail = ({ resource }) => {
 								<div className="column is-8 is-offset-2">
 									<div className="content is-medium">
 										<h2 className="subtitle is-4">
-											{resource.createdAt}
+											{moment(resource.createdAt).format(
+												'LLL'
+											)}
+											<ResourceLabel
+												status={resource.status}
+											/>
 										</h2>
 										<h1 className="title">
 											{resource.title}
 										</h1>
 										<p> {resource.description} </p>
 										<p>
-											Time to finish:{' '}
+											Time to finish:
 											{resource.timeToFinish} min
 										</p>
-										<Link
-											href={`/resources/${resource.id}/edit`}
-										>
-											<a className="button is-warning">
-												Update
-											</a>
-										</Link>
-										<button
-											onClick={activeResource}
-											className="button is-success ml-1"
-										>
-											Activate
-										</button>
+										{resource.status === 'inactive' && (
+											<>
+												<Link
+													href={`/resources/${resource.id}/edit`}
+												>
+													<a className="button is-warning">
+														Update
+													</a>
+												</Link>
+												<button
+													onClick={activeResource}
+													className="button is-success ml-1"
+												>
+													Activate
+												</button>
+											</>
+										)}
 									</div>
 								</div>
 							</div>
@@ -62,7 +73,7 @@ const ResourceDetail = ({ resource }) => {
 };
 
 // export async function getStaticPaths() {
-// 	const dataRes = await fetch('http://localhost:3001/api/resources');
+// 	const dataRes = await fetch(`${process.env.API_URL}/resources`);
 // 	const data = await dataRes.json();
 // 	const paths = data.map((resource) => {
 // 		return {
@@ -78,7 +89,7 @@ const ResourceDetail = ({ resource }) => {
 
 // export async function getStaticProps({ params, query }) {
 // 	const dataRes = await fetch(
-// 		`http://localhost:3001/api/resources/${params.id}`
+// 		`${process.env.API_URL}/resources/${params.id}`
 // 	);
 // 	const data = await dataRes.json();
 
@@ -92,7 +103,7 @@ const ResourceDetail = ({ resource }) => {
 
 export async function getServerSideProps({ params, query }) {
 	const dataRes = await fetch(
-		`http://localhost:3001/api/resources/${params.id}`
+		`${process.env.API_URL}/resources/${params.id}`
 	);
 	const data = await dataRes.json();
 
