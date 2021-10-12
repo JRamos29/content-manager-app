@@ -1,4 +1,4 @@
-## A simple content manager application using React and NextJS.
+A simple content manager application using React and NextJS.
 
 ## Getting Started
 
